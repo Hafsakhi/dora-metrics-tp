@@ -1,17 +1,22 @@
 name: CI-CD Pipeline
-on:
+
+"on":
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
+
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
-steps:
+    steps:
       - uses: actions/checkout@v4
-- name: Build
+
+      - name: Build
         run: echo "Build OK"
-- name: Test
+
+      - name: Test
         run: echo "Tests OK"
-- name: Deploy
-        run: |
-          echo "Deployment done"
+
+      - name: Deploy
+        run: echo "Deployment done"
